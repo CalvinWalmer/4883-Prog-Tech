@@ -5,17 +5,13 @@
 */
 #include <iostream>
 
-#define endl "\n"
-
 using namespace std;
 
 int main() {
-    int B = 0, A = 0;
-    
-    while (cin >> A >> B) {
-        
-        // your stuff here
+  long x, y;
 
-    }
-    return 0;
+  while (cin >> x >> y) {
+    cout << abs(x - y) << endl;
+  }
+  return 0;
 }
