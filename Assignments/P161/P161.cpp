@@ -1,56 +1,54 @@
 #include <iostream>
 #include <vector>
-#include <string>
+#include <iomanip>
 
 using namespace std;
 
-typedef long long int ll;
-
-
-//Code adapted from https://www.geeksforgeeks.org/lcm-of-given-array-elements/
-int gcd(int a, int b)
-{
-    if (b == 0)
-        return a;
-    return gcd(b, a % b);
-}
-
-// Returns LCM of array elements
-//Code adapted from https://www.geeksforgeeks.org/lcm-of-given-array-elements/
-ll findlcm(vector<int> list, int n)
-{
-    // Initialize result
-    ll ans = list.at(0);
- 
-    // ans contains LCM of arr[0], ..arr[i]
-    // after i'th iteration,
-    for (int i = 1; i < n; i++)
-        ans = (((list.at(i) * ans)) /
-                (gcd(list.at(i), ans)));
- 
-    return ans;
-}
-
-
-
-
 int main()
 {
-    int x, c;
-    vector<int> list;
+    int x, c, on, min, time;
+    vector<int> list;    
 
     while(cin >> x){
-        if(x == 0){
+        if(x == 0 && !c){
             c++;
-            cout << findlcm(list, list.size()) << endl;
-            list.empty();
-        }
-        else{
+            time = 0;
+            for(int t = min; t < 18000; t++){
+                on = 0;
+                for (int i = 0; i < list.size(); i++){
+                    if (t % (2 * list.at(i)) < list.at(i) - 5){
+                        on++;
+                    }
+                }
+                if (on == list.size()) {
+                    time = t;
+                    break; 
+                }
+            }
+
+
+            list.clear();
+            min = 0;
+
+
+            if (time == 0){
+                cout << "Signals fail to synchronise in 5 hours" << endl;
+
+            }else{
+                   cout << setw(2) << setfill('0') << time / 3600 << ":"
+                    << setw(2) << setfill('0') << (time % 3600) / 60 << ":"
+                    << setw(2) << setfill('0') << time % 60 << endl;
+            }
+        }else{
             c = 0;
+            if(min == 0){min = x;}
+            if(x < min){min = x;}
             list.push_back(x);
-        } 
+        }
+        
         if (c >= 3){
             break;
         }
     };
+    return(0);
 }
