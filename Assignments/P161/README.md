@@ -1,4 +1,4 @@
-P161 Traffic Lights
+### P161 Traffic Lights
 
 Calvin Walmer
 
@@ -18,5 +18,5 @@ while they are all still green is excluded from the reckoning.
 - run and compile in terminal
 - place input and p161.cpp in the same directory
 - navigate to the directory in a cmd terminal using cd ...
-- run the following command: cld && g++ p161.cpp && a < input
+- run the following command: cls && g++ p161.cpp && a < input
 - profit
