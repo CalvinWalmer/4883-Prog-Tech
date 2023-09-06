@@ -13,7 +13,7 @@ int main()
         if(x == 0 && !c){
             c++;
             time = 0;
-            for(int t = min; t < 18000; t++){
+            for(int t = min; t <= 18000; t++){
                 on = 0;
                 for (int i = 0; i < list.size(); i++){
                     if (t % (2 * list.at(i)) < list.at(i) - 5){
