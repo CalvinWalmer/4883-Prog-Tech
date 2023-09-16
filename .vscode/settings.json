@@ -3,6 +3,11 @@
     "files.associations": {
         "iostream": "cpp",
         "vector": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "utility": "cpp",
+        "map": "cpp",
+        "iomanip": "cpp",
+        "xtree": "cpp",
+        "string": "cpp"
     }
 }
