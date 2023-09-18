@@ -6,28 +6,23 @@ int main(){
     int numNums, n, k, p, end, offset;
     cin >> numNums;
 
-    for(int i = 0; i < numNums; i++){
+    for(int i = 1; i < numNums+1; i++){
         cin >> n;
         cin >> k;
         cin >> p;
+        end = -1;
 
-
-        if(p == n){offset = 0;} 
-        else if(p < n){
-            offset = n - (p % n);
-        }
-        else{
-            offset = p - n;
-        }
-
-        cout << "Offset: " << offset << endl;
-
-        if(k + offset > n)
-        {
-            cout << 1 + (k + offset - n) << endl;
+        if(p == n){
+            end = k;
         }else{
-            cout << k + offset << endl;
+            p = p % n;
+            if (k + p <= n){
+                end = k + p;
+            }else{
+                end = (p - (n - k)) % n;
+            } 
         }
+        cout << "Case "  << i << ": " << end << endl;
     }
 
     return(0);
