@@ -80,13 +80,19 @@ int main(){
             }
         }
 
-        //Debug
+        // //Debug
+
+        // for(int i = 0; i < states.size(); i++){
+        //     cout << "STATE " << i + 1 << endl;
+        //     states[i].PrintCities();
+        // }
+        // cout << "------------------------------" << endl;
+
 
         for(int i = 0; i < states.size(); i++){
-            cout << "STATE " << i + 1 << endl;
-            states[i].PrintCities();
+            //Do MST within... Prims probably
+            
         }
-        cout << "------------------------------" << endl;
 
 
     }
