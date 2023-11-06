@@ -1,0 +1,6 @@
+AB BC
+BC CD
+CD DC
+
+AB BC
+BC CD
