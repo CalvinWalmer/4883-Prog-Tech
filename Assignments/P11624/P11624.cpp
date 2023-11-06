@@ -8,7 +8,6 @@ using namespace std;
 int SpreadBFS(vector<vector<char>> maze);
 
 
-
 int main(){
     char x;
     int cases, rows, cols;
@@ -71,6 +70,10 @@ int SpreadBFS(vector<vector<char>> maze){
         newJs.clear();
         newFs.clear();
 
+
+        //Both Joe and the fire use similar algorithms, the difference is that fire can overwrite Joe
+
+        //Stepping Fire
         for(int i = 0; i < Fs.size(); i++){
             for (int j = 0; j < 4; j++){
                 if (    Fs[i].first+dx[j] >= 0 && Fs[i].first+dx[j] <= maze.size() - 1 &&
@@ -83,13 +86,14 @@ int SpreadBFS(vector<vector<char>> maze){
             }
         } 
 
+        //Stepping Joe
         for(int i = 0; i < Js.size(); i++){
             for (int j = 0; j < 4; j++){
                 if (    Js[i].first+dx[j] >= 0 && Js[i].first+dx[j] <= maze.size() - 1 &&
                         Js[i].second+dy[j] >= 0 && Js[i].second+dy[j] <= maze[0].size() - 1){ //If spread square is in bounds
-                    if (maze[Js[i].first+dx[j]][Js[i].second+dy[j]] == '.'){
-                        maze[Js[i].first+dx[j]][Js[i].second+dy[j]] = 'J';
-                        newJs.push_back(make_pair(Js[i].first+dx[j], Js[i].second+dy[j]));
+                    if (maze[Js[i].first+dx[j]][Js[i].second+dy[j]] == '.'){ //If square is passable (Not on fire or a wall)
+                        maze[Js[i].first+dx[j]][Js[i].second+dy[j]] = 'J'; //Put Joe there
+                        newJs.push_back(make_pair(Js[i].first+dx[j], Js[i].second+dy[j]));  
                         movement = true;
                     }
                 }else{ //If spread square is out of bounds.... ESCAPE!!! :)
@@ -99,7 +103,20 @@ int SpreadBFS(vector<vector<char>> maze){
         }
 
         c++;
+
+
+        // for(int i = 0; i < maze.size(); i++){
+        //     for(int j = 0; j < maze.size(); j++){
+        //         cout << maze[i][j] << " ";
+        //     }
+        //     cout << endl;
+        // }
+        // cout << endl;
+
+
+    //If Joe is still moving, theres still a chance!
     }while(movement);
+
     return -1; //Impossible
 
 }
