@@ -18,5 +18,5 @@
 |P10226| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P10226| A06 Hardwood Species|
 |P10116| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P10116| A08 Robot Motion|
 |P11624| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P11624| A09 Fire!|
-|P11280| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P11280| A10 Flying to Fredericton|
+|P762  | https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P762  | A10 We Ship Cheap|
 |P10147| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P10147| A11 Highways|
