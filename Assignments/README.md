@@ -21,3 +21,4 @@
 |P762  | https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P762  | A10 We Ship Cheap|
 |P10034| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P10034| A11 Freckles|
 |P11228| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P11228| For Fun!|
+|P11086| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P11086| Composite Primes Lecture|
