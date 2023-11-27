@@ -26,32 +26,18 @@ class Nation:
             c = c + 1
 
     def DisplayNation(self):
-        citiesX = []
-        citiesY = []
-        nodes = []
-        edges = []
+        points = []
+        print(len(self.states))
         for state in self.states:
-            citiesX = citiesX + state.GetCitiesX()
-            citiesY = citiesY + state.GetCitiesY()
+            points = points + state.GetCities()
+        
+        print(points)
 
-        nodes = go.Scatter(
-            x=citiesX,
-            y=citiesY,
-            mode='markers',
-            marker=dict(size=20)
-        )
+        points = np.array(points)
+        plt.plot(points[:,0], points[:,1], 'o')
+        plt.show()
 
-        # edges = go.Scatter(
-        # x=citiesX,
-        # y=citiesY,
-        # mode='lines',
-        # line=dict(width=1)
-        # )
 
-        # Create the figure
-        fig = go.Figure(data=nodes)
-        fig.update_layout(showlegend=False)
-        fig.show()
     def GetStates(self):
         return self.states
 
@@ -129,7 +115,7 @@ for _ in range(int(numCases)):
             nation.AddState(State(threshold))
             nation.AtBack().AddCity(x, y)
 
-    # nation.DisplayNation()
+    nation.DisplayNation()
     # print()
     # print("###################################")
     # print("NATION {}".format(c))
@@ -140,10 +126,19 @@ for _ in range(int(numCases)):
     for state in nation.GetStates():
         points = np.array(state.GetCities())
         if len(points) > 3:
-            tri = Delaunay(points, qhull_options="QJ")
-            plt.triplot(points[:,0], points[:,1], tri.simplices)
+            dt = Delaunay(points, qhull_options="QJ")
+            cvh = dt.convex_hull
+            tri = dt.simplices
+
+            print("CONVEX HULL")
+            print(cvh)
+            print("TRIANGULATION")
+            print(tri)
+            print("---------------------------")
+            plt.triplot(points[:,0], points[:,1], tri)
             plt.plot(points[:,0], points[:,1], 'o')
             plt.show()
+
 
 
 
