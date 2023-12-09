@@ -1,0 +1,6 @@
+This problem involves obtaining the partiy of a number. The parity is defined as being the sum of bits set to 1 in a binary representation of a number.
+We had discussed ways to approcah this problem in class by first converting the integer number to its equivalent binary number but I didn't want to use
+whatever library we were discussing at the time so I opted for using bit shifts. I don't use bit shifts very often because I just dont run into that many
+use cases for them but I thought this was a good opportunity. To solve this, the number is bit shifted over once each iteration, then if its a one, the
+parity counter is increased. There were some complications with printing the results out backwards and also with trimming leading zeros so Im sure whatever
+time i saved using bit shifts was immediately negated by all the string ops.
