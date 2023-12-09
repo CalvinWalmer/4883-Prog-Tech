@@ -4,6 +4,10 @@
         "vector": "cpp",
         "utility": "cpp",
         "tuple": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "xutility": "cpp",
+        "xstring": "cpp",
+        "initializer_list": "cpp",
+        "xtree": "cpp"
     }
 }
