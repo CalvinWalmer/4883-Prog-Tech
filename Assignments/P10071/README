@@ -1,0 +1,14 @@
+This problem is an easy kinematics problem. The relevant equation is:
+
+x = v_0t + (1/2)at^2
+
+The problem asks: For a given inital velocity and time, how far will a particle have travled from t=0.
+Becasue there is no acceleration, the equation reduces to
+
+x = v_0t
+
+And, because we want to know how much distance was traveled in TWICE the time, we sub in 2t for t yielding:
+
+x = 2 * v_0 * t
+
+This was the equation I used, all that was left to do is read in v and t and print out the resulting x.
