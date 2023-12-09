@@ -4,7 +4,7 @@
 | :---: | ----------- | ---------------------- |
 |P10055| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P10055| Register + Hashmat|
 |P10931| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P10931| Easy Breezy 1: Parity|
-|P11614| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P10931| Easy Breezy 2: Etruscan Warriors Never Play Chess|
+|P11614| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P11614| Easy Breezy 2: Etruscan Warriors Never Play Chess|
 |P11805| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P11805| Easy Breezy 3: Bafana Bafana|
 |P10071| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P10071| Easy Breezy 4: Back to High School Physics|
 |P10773| https://github.com/CalvinWalmer/4883-Prog-Tech/tree/main/Assignments/P10773| Easy Breezy 5: Back to Intermediate Math|
