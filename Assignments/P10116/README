@@ -1,0 +1,10 @@
+Robot motion involves a root traveling on a grid. On each tile of the grid there is an instruction that tells the robot where to go next. The goal of the program
+is to find out either how long it takes the robot to exit the grid or to find out how long it takes before it loops.
+
+At first, I was intimidated by trying to find how long the loops were. The time it took the robot to exit seemed simple to me: Just follow instructions until
+the robot tried to access a grid spot tht was out of bounds. For this problem I set up a 2d vector of grid spots. Each grid spot contained a character that the robot
+was supposed to go next (N,S,E,W). The grid squares also included a boolean to indicate whether or not the square had been visited. Then i implemented a step function to actually move the robot. In order to keep track of the steps that re robot took, I decided
+to pass everything into my function by reference. If the step function encounters a square that has already been visited OR a square that is out of bounds, the loop ends. If the loop ends becasue an out of bounds
+condition has been reached then the "stepsFor" variable will have a value and "loopsFor" will be 0. If the loop ends becasue a square has already been visited then the oppositew will be true.
+
+This problem used a sort of memoization to keep track of where the robot had been before.
