@@ -1,0 +1,13 @@
+Etruscan Warriors Never Play Chess is a probem where you are given a group of soldiers and need to find out the number of rows they can occupy.
+The number of soldiers per row increases by one on each row so the end result will be the count of all the rows that look like this:
+0
+00
+000
+0000
+00000
+and so on.
+
+My approach to this problem was to zero in on the correct row amount from both sides of the number. I calculated the highest possible amount of rows
+given the constraint of n < 10^18. I hardcoded this value in then used a kind of binary search like procedure to determine the correct row number.
+That is if the guess is too high, half it, if its too low add half of the guess to it. This was my general approach, so in the code the formulas do not
+  exaclty match these rules. I determined these rules through trial and error of the given small input file until i got the correct result.
