@@ -7,8 +7,12 @@ of ideas baout how I MIGHT solve it. During researching this problem I found out
 Delauney triangulation provides a nice mesh between points instead of a spider web where every point is connected to every other point. The original investigation into Delauney Triangulation
 was in an effort to save computation time down the line. 
 This:
+
 ![image](https://github.com/CalvinWalmer/4883-Prog-Tech/assets/112140788/ea8f9266-f1ed-4e38-85fc-3c5ab48ecefe)
+
+
 Instead of this:
+
 ![image](https://github.com/CalvinWalmer/4883-Prog-Tech/assets/112140788/f8925288-74db-4792-833c-7ae2262a084a)
 
 Convienently, when obtaining the DT, a convex hull is generated as well! The importance of this is that at this moment it seems ome that the "solutions" to this problem
